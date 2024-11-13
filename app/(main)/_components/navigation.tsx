@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { ChevronLeft, MenuIcon, PlusCircle, Search, Settings } from "lucide-react";
+import { ChevronLeft, MenuIcon, Plus, PlusCircle, Search, Settings } from "lucide-react";
 import { usePathname } from "next/navigation";
 import React, { ElementRef, useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "usehooks-ts";
@@ -149,6 +149,11 @@ const Navigation = () => {
                 </div>
                 <div className="mt-4">
                         <DocumentList />
+                        <Item 
+                        onClick={handleCreate}
+                        icon={Plus}
+                        label="Add a page"
+                        />
                 </div>
 
                 {/* Обработчик изменения размера */}
